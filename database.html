@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Data Tables</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+/>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="http://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"
+    />
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="database.js"></script>
+    <link rel="stylesheet" href="database.css">
+  </head>
+  <body>
+        <div class="title">Order Management</div>
+        <hr>
+        <form>
+    <div class="container">
+      <div class="row1">
+            <div class="row">
+                <div class="form-group">
+                    <label for="id" style="margin-left: 73px;">Customer ID</label>
+                    <input
+                        type="text"
+                        name="customer"
+                        class="form-control"
+                        id="customer"
+                        placeholder="Enter Customer ID"
+                    />
+                </div>
+      </div>
+      <div class="row">
+                <div class="form-group">
+                    <label for="name" style="margin-left: 73px;">Name</label>
+                    <input
+                        type="text"
+                        name="name"
+                        class="form-control"
+                        id="name"
+                        placeholder="Enter Name"
+                    />
+                </div>
+      </div>
+                <div class="row">
+                <div class="form-group">
+                    <label for="email" style="margin-left: 73px;">Email</label>
+                    <input
+                        type="text"
+                        name="email"
+                        class="form-control"
+                        id="email"
+                        placeholder="Enter Email"
+                    />
+                </div>
+      </div>
+    </div>
+    <div class="row2">
+      <div class="row">
+                <div class="form-group">
+                    <label for="contact">Contact</label>
+                    <input
+                        type="text"
+                        name="contact"
+                        class="form-control"
+                        id="contact"
+                        placeholder="Enter Contact"
+                    />
+                </div>
+      </div>
+      <br>
+      <div class="row">
+                <div class="form-group">
+                    <label for="city" style="margin-left: 12px;">City</label>
+                    <input
+                        type="text"
+                        name="city"
+                        class="form-control"
+                        id="city"
+                        placeholder="Enter City"
+                    />
+                </div>
+      </div>
+        <div class="row">
+                <div class="form-group">
+                    <label for="province" style="margin-left: 30px;">Province</label>
+                    <input
+                        type="text"
+                        name="province"
+                        class="form-control"
+                        id="province"
+                        key="province"
+                        placeholder="Enter Province"
+                    />
+                </div>
+      </div>
+      <div class="row">
+                <div class="form-group">
+                    <label for="postal" style="margin-left: 36px;">Postal Code</label>
+                    <input
+                        type="text"
+                        name="postal"
+                        class="form-control"
+                        id="postal"
+                        key="postal"
+                        placeholder="Enter Postal Code"
+                    />
+                </div>
+    </div>
+      </div>
+                <div class="button">
+                    <button
+                    type="submit"
+                    class="btn btn-success"
+                    id="Submit"
+                    onclick="AddData()">
+                        Add Order
+                    </button>
+                    <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="Update">Update
+                    </button>
+                </div>
+            </div>
+    </form>
+    <hr>
+    <div class="container">
+      <div>
+    <h2 id="history">Order History</h2>
+</div>
+            <div class="row=">
+                <div class="text">
+                    <table class="table table-fluid" id="myTable">
+                        <thead>
+                            <tr>
+                                <th>Customer ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Contact</th>
+              <th>City</th>
+              <th>Province</th>
+              <th>Postal Code</th>
+              <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tbody>
+          <tr>
+            <td></td>
+          </tr>
+        </tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+  </body>
+<script>
+  
+  $(document).ready(function () {
+  $("#myTable").DataTable();
+});
+
+</script>
+</html>
