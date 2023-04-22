@@ -1,0 +1,65 @@
+.container1 {
+  padding: 40px;
+  padding-left: 50px;
+  float: left;
+}
+
+.container2 {
+  margin-left: 30px;
+  float: right;
+}
+
+button {
+  color: black;
+  background: whitesmoke;
+  height: 50px;
+  border-radius: 8px;
+  border: 0;
+}
+
+button:hover {
+  background: aquamarine;
+}
+
+#Submit {
+  color: white;
+  background-color: #228b22;
+  align-items: right;
+}
+
+#Update {
+  display: none;
+  color: white;
+  background-color: #228b22;
+  margin-left: 50px;
+}
+
+#updateBtn {
+  color: white;
+  background-color: #228b22;
+  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 5px;
+}
+
+#deleteBtn {
+  color: white;
+  background-color: #d22b2b;
+  padding: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 6px;
+}
+
+th {
+  background: grey;
+  color: white;
+}
+
+h2 {
+  padding-top: -10px;
+  padding-bottom: 20px;
+}
